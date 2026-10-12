@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>연구자의 선택 읽기</title>
+<style>
+  :root {
+    --ink: #1c1f26;
+    --sub: #5b616e;
+    --line: #d9d6cf;
+    --navy: #1f2d4a;
+    --accent: #8a6d3b;
+    --box: #f5f3ee;
+  }
+  @page {
+    size: A4;
+    margin: 17mm 17mm 18mm 17mm;
+    @bottom-left { content: "김종길 · 정현녕  |  우리 대학원 석사논문 읽기"; font: 7.5pt "Noto Sans KR"; color: #8a8f99; }
+    @bottom-right { content: "PAGE " counter(page); font: 7.5pt "Noto Sans KR"; color: #8a8f99; letter-spacing: .08em; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.62;
+    color: var(--ink);
+    word-break: keep-all;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .kicker { font-size: 7.5pt; letter-spacing: .14em; color: var(--sub); font-weight: 500; }
+  .kicker b { color: var(--navy); font-weight: 700; }
+  h1 {
+    font-family: "Noto Serif KR", serif; font-weight: 700;
+    font-size: 21pt; line-height: 1.32; color: var(--navy);
+    margin: 10px 0 4px;
+  }
+  .lead { color: var(--sub); font-size: 9pt; margin: 0 0 12px; }
+  table.meta { width: 100%; border-collapse: collapse; font-size: 8.8pt; margin-bottom: 6px; }
+  table.meta th, table.meta td { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
+  table.meta th { width: 64px; color: var(--sub); font-weight: 500; background: #faf9f6; white-space: nowrap; }
+  table.meta td.blank { min-width: 90px; }
+  section.q { margin-top: 16px; }
+  .think p:last-child, .think ul:last-child { margin-bottom: 2px; }
+  section.q.page-break { break-before: page; margin-top: 0; }
+  .qh { display: flex; gap: 10px; align-items: baseline; border-bottom: 1.5px solid var(--navy); padding-bottom: 5px; margin-bottom: 8px; break-after: avoid; }
+  .qh .no { font-family: "Noto Serif KR", serif; font-weight: 700; font-size: 15pt; color: var(--accent); line-height: 1; }
+  .qh h2 { font-size: 10.8pt; font-weight: 700; margin: 0; color: var(--navy); line-height: 1.45; }
+  .label { break-after: avoid; font-size: 8pt; font-weight: 700; letter-spacing: .06em; color: var(--accent); margin: 8px 0 3px; }
+  p { margin: 0 0 5px; }
+  ul { margin: 2px 0 5px; padding-left: 15px; }
+  li { margin-bottom: 2px; }
+  .think { background: var(--box); border-left: 3px solid var(--navy); padding: 8px 12px 6px; margin-top: 8px; break-inside: avoid; }
+  .think .label { margin-top: 0; color: var(--navy); }
+  .em { font-weight: 700; color: var(--navy); }
+  .rq { border: 1px solid var(--line); padding: 6px 10px; margin: 4px 0 6px; background: #fff; }
+  table.t { width: 100%; border-collapse: collapse; font-size: 8.7pt; margin: 4px 0 6px; line-height: 1.5; }
+  table.t th, table.t td { border-bottom: 1px solid var(--line); padding: 4px 6px; text-align: left; vertical-align: top; }
+  table.t th { color: var(--sub); font-weight: 500; border-bottom: 1.2px solid var(--navy); }
+  table.t td.k { white-space: nowrap; font-weight: 500; color: var(--navy); }
+  table.t td.p { white-space: nowrap; color: var(--sub); }
+  .fig { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 4px 0 6px; }
+  .fig div { background: #fff; border: 1px solid var(--line); padding: 6px 8px; font-size: 8.6pt; line-height: 1.5; }
+  .fig b { color: var(--navy); }
+  .closing { margin-top: 18px; border-top: 1.5px solid var(--navy); padding-top: 10px; break-inside: avoid; }
+  .closing h3 { font-family: "Noto Serif KR", serif; font-size: 12pt; color: var(--navy); margin: 2px 0 6px; }
+  .ask { background: var(--navy); color: #fff; padding: 10px 14px; margin-top: 10px; break-inside: avoid; }
+  .ask .label { color: #d8c7a3; margin-top: 0; }
+  .ask p { margin: 0; }
+  .small { font-size: 8.4pt; color: var(--sub); }
+</style>
+</head>
+<body>
+
+<div class="kicker"><b>INCHEON NATIONAL UNIVERSITY</b> &nbsp;·&nbsp; 지역문화학과 연구방법론 &nbsp;·&nbsp; 우리 대학원 석사논문 읽기</div>
+<h1>논문의 결과보다,<br>연구자의 선택을 읽다</h1>
+<p class="lead">주제 선택 · 자료 확보 · 분석 축 · 결론 도출의 과정을 중심으로</p>
+
+<table class="meta">
+  <tr><th>성명</th><td>김종길</td><th>학번</th><td class="blank"></td></tr>
+  <tr><th>성명</th><td>정현녕</td><th>학번</th><td class="blank"></td></tr>
+  <tr><th>분석 논문</th><td colspan="3">이규영(2026). 「AI가 일으킨 음악산업의 변화와 공정한 생태계 구축 과제」. 인천대학교 문화대학원 지역문화학과 석사학위논문 (지도교수 한상정)</td></tr>
+</table>
+
+<!-- 01 -->
+<section class="q">
+  <div class="qh"><span class="no">01</span><h2>이 연구는 결국 ‘어떤 연구’를 했다고 해야 할까요, 핵심 연구 질문은 무엇이었나요?</h2></div>
+  <div class="label">논문에 대한 답변</div>
+  <p>생성형 AI가 음악산업에 일으킨 변화를 <span class="em">중·소규모 음악 제작사와 인디뮤지션</span>의 시각에서 살피고, 공정한 산업 생태계를 위해 해결해야 할 과제를 도출한 연구다. 원문에 별도의 연구문제 목록은 없어, 연구목적(p.4)을 바탕으로 핵심 질문을 다음과 같이 정리했다.</p>
+  <div class="rq">“AI 확산 속에서 중·소규모 제작사와 인디뮤지션은 어떤 변화와 위험을 겪고 있으며, 공정한 음악산업 생태계를 위해 무엇이 필요한가?”</div>
+  <ul>
+    <li>AI 음악 기술은 현장에 어떻게 도입되고 있는가 (Ⅱ장)</li>
+    <li>그 결과 어떤 쟁점이 생겼는가: 공급 과잉, 어뷰징, 저작권 (Ⅲ장)</li>
+    <li>어떤 기술·인력·정책·거버넌스 과제가 필요한가 (Ⅳ·Ⅴ장)</li>
+  </ul>
+  <div class="think">
+    <div class="label">발표자의 생각</div>
+    <p>저희는 연구자가 AI 기술 자체보다 AI 때문에 흔들리는 중소 제작사의 생존과 수익 구조에 관심을 가졌다고 생각한다. 설문을 한국음악레이블산업협회(음레협) 회원사를 통해 진행했고 음레협 자료를 “자료의 신뢰성이 확보되었다”(p.10)고 평가한 점에서, 연구자가 협회와 가까운 현장에 있었을 가능성을 떠올렸다. 또 연구목적(p.3~4)에서 데이터를 제시하기 전부터 “제도적 보완이 시급한 상황”이라고 밝힌다. 이 연구는 ‘보호와 개선이 필요하다’는 전제를 가지고 출발한 것으로 읽힌다.</p>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="q">
+  <div class="qh"><span class="no">02</span><h2>이 연구를 시도했던 배경은 무엇이고, 연구 범위는 어떻게 되나요?</h2></div>
+  <div class="label">논문에 대한 답변</div>
+  <ul>
+    <li><span class="em">배경</span>(p.1~4): AI 작곡·작사 도구로 제작 효율은 높아졌지만 음원 대량 생산, 스트리밍 어뷰징, 학습 데이터 저작권, 불투명한 수익 분배가 새 문제로 떠올랐다. 연구자는 선행연구가 기술·법리·일반 이용자 인식에 머물러 <b>현장 종사자의 관점</b>이 비어 있다고 보았다.</li>
+    <li><span class="em">범위</span>(p.4~6): 중·소규모 제작사와 인디뮤지션. 그 이유로 ① 음악은 권리 주체와 분배 체계가 이미 정비되어 문제 해결 가능성이 높고 ② 중소·인디는 다양성의 기반이지만 정책 사각지대에 있다는 점을 든다.</li>
+    <li><span class="em">조사 대상</span>(p.6): 음레협(65개 중소 제작사 협의체) 회원사 중 제작사와 활동 중인 인디뮤지션. 40명에게 배포해 27부 회수(응답률 67.5%).</li>
+  </ul>
+  <div class="think">
+    <div class="label">발표자의 생각</div>
+    <p>저희는 원문이 밝힌 이유 외에, 실제로 접근할 수 있는 조사 통로가 범위를 정했을 가능성도 크다고 본다. 교수님이 지난 수업에서 말씀하셨듯이 현장에 가까운 사람은 자신이 만날 수 있는 대상과 확보 가능한 자료를 중심으로 연구를 완성한다. 협회라는 통로가 있었기에 ‘중소·인디’가 현실적인 선택이 되었을 것이다. 반대로 협회 비회원, 대형 기획사, AI로 새로 진입한 창작자의 시각은 빠진다. 문헌과 정책은 버추얼 아이돌부터 EU·미국·일본의 규제 비교까지 넓게 다루었지만, 직접 데이터를 모은 대상은 협회 회원사로 한정했다.</p>
+    <p class="em">연구 범위는 크게 잡는 것보다 끝까지 검증할 수 있게 좁히는 전략을 쓴 것 같다.</p>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="q">
+  <div class="qh"><span class="no">03</span><h2>(연구목차 전체를 놓고) 이 연구는 어떤 구조와 맥락으로 설계되어 있는지 설명해주세요.</h2></div>
+  <div class="label">논문에 대한 답변</div>
+  <table class="t">
+    <tr><th style="width:118px">장</th><th>주요 내용</th><th style="width:52px">쪽</th></tr>
+    <tr><td class="k">Ⅰ. 서론</td><td>연구배경(선행연구 정리 포함)·목적, 연구범위와 방법(설문·인터뷰 설계, 한계)</td><td class="p">1–10</td></tr>
+    <tr><td class="k">Ⅱ. AI 음악산업 현황</td><td>AI 버추얼 아이돌, AI 음악 제작, AI 음악 마케팅</td><td class="p">11–29</td></tr>
+    <tr><td class="k">Ⅲ. 주요 쟁점</td><td>산업 구조 변화, 음악 AI 어뷰징, 법적·윤리적 쟁점</td><td class="p">30–47</td></tr>
+    <tr><td class="k">Ⅳ. 생태계 구축 과제</td><td>어뷰징 대응 기술, 인력과 교육, 분야별 역할(정책·규제·거버넌스)</td><td class="p">48–83</td></tr>
+    <tr><td class="k">Ⅴ. 결론</td><td>새로운 정산 방식, 법제화, 민관 협의체</td><td class="p">84–87</td></tr>
+  </table>
+  <p>구조는 <span class="em">현황 → 쟁점 → 과제</span>로 이어지는 문제해결형이다. 선행연구는 독립된 장 없이 서론에서 정리했고, 설문·인터뷰 결과도 별도의 분석 장 없이 Ⅱ~Ⅳ장 각 주제의 근거로 나누어 배치했다(그림 2.1~4.8).</p>
+  <div class="think">
+    <div class="label">발표자의 생각</div>
+    <p>교수님이 강조하신 ‘톱니바퀴’ 관점에서 설문과 결론이 맞물리는지 확인했다. 결론의 첫 제안인 <b>이용자별 정산 등 새로운 정산 방식</b>(p.84)은 설문 23개 문항에서 직접 묻지 않았다. 설문에서 정책 1순위로 나온 것은 ‘기술 개발 및 스타트업을 위한 재정 지원·투자 확대’였다(p.68). 정산 개편의 논리는 주로 정책 분야 인터뷰(p.69)에서 나온다. 결과를 장마다 나누어 배치하면 읽기는 쉽지만, 어떤 결론이 어떤 데이터에서 나왔는지는 추적하기 어려워진다. 설문 문항과 결론 제안을 표 하나로 대응시켰다면 톱니바퀴가 더 분명했을 것이다.</p>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="q">
+  <div class="qh"><span class="no">04</span><h2>해당 연구를 위해 어떤 주제의 선행연구 검토가 필요했고, 각 주제별 핵심 선행연구는 무엇이었나요?</h2></div>
+  <div class="label">논문에 대한 답변</div>
+  <p>연구자는 ‘AI 음악’으로 1,283편을 검색하고 ‘음악산업’을 더해 66편을 추렸다. 이어 66편의 주요 키워드를 현황·쟁점·생태계 과제로 다시 분류해 논문의 뼈대로 삼았다(p.1~2).</p>
+  <table class="t">
+    <tr><th style="width:150px">주제</th><th>핵심 선행연구</th></tr>
+    <tr><td class="k">창작 환경 변화</td><td>박휴용(2024), 생성형 AI의 등장과 음악 창작 환경의 변화</td></tr>
+    <tr><td class="k">기업의 기술 수용</td><td>김신우·전훈(2025), AI 시대 음원 제작 시스템의 변화와 산업의 적응 전략</td></tr>
+    <tr><td class="k">이용자 인식</td><td>최재서·민영(2024), 생성형 AI 콘텐츠 수용 및 거부 의도 요인</td></tr>
+    <tr><td class="k">저작권 법리</td><td>이해완(2024), 인간의 창작적 기여 / 윤종민(2023), AI 창작물의 저작권관계</td></tr>
+    <tr><td class="k">기술적 해법</td><td>이종필 외(2025), 스트리밍 이후 시대의 음악 AI 에이전트 구조 (기여도 기반 수익 분배)</td></tr>
+    <tr><td class="k">규제 거버넌스</td><td>고환경 외(2024), 해외 주요국의 AI 규제 거버넌스</td></tr>
+  </table>
+  <p>연구 공백은 “기존 연구는 기술·법리·일반 이용자 인식에 초점 → 본 연구는 실제 현장 종사자의 관점”으로 제시된다(p.3).</p>
+  <div class="think">
+    <div class="label">발표자의 생각</div>
+    <p>저희는 선행연구의 선택이 결론과 미리 맞물려 있다고 본다. 법리·거버넌스 연구는 Ⅳ장의 규제·거버넌스 제안으로, 기여도 기반 정산 연구는 결론의 정산 방식 개편으로 이어진다. 원문은 마스터링 비용 절감(p.20), AI 다국어 음원(p.23) 같은 긍정 사례도 소개한다. 다만 이 사례들은 주로 기사와 해외 보고서에서 가져왔고, 비용 절감 효과를 연구자가 직접 측정한 데이터는 없다. 긍정 효과도 직접 수치로 확인했다면 연구자의 출발 전제를 더 엄격하게 검증할 수 있었을 것이다.</p>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="q">
+  <div class="qh"><span class="no">05</span><h2>(연구 방법론 관점에서) 본 연구는 어떤 구조와 방법으로 설계되어 있나요?</h2></div>
+  <div class="label">논문에 대한 답변</div>
+  <p>문헌연구를 바탕으로 설문조사와 전문가 심층 인터뷰를 병행한 <span class="em">혼합연구</span>다(p.6).</p>
+  <ul>
+    <li><span class="em">설문</span>(27명, 23문항): 직무는 경영·관리 33.3%, 창작자 25.9%, A&amp;R·기획·마케팅 14.8%. 경력 20년 이상이 40.7%. 규모는 2~9인 40.7%, 1인 기업·프리랜서 29.6%. 문항은 도입 현황, 생산성, 품질 인식, 필요 역량, 직무 변화, 정책 우선순위 등으로 구성(p.6~8, 부록).</li>
+    <li><span class="em">인터뷰</span>(10년 이상 전문가 7인): 제작 3인(K-POP·OST·음악 라이브러리 분야 각 20년 이상 프로듀서), 교육 2인(서울예술대·동아방송예술대 교수), 정책 2인(문화정책연구소, 방송 기자). 분야별로 질문 영역을 달리 설계(p.9).</li>
+  </ul>
+  <div class="think">
+    <div class="label">발표자의 생각</div>
+    <p>분야별 질문 영역을 미리 설계한 점은 교수님이 말씀하신 ‘분석 축으로 질문을 짠다’는 원칙에 가깝다. 다만 정책 분야 전문가 G의 진술이 Ⅲ~Ⅴ장의 핵심 주장에 반복해서 인용된다(p.36, 39, 69, 82, 85). 정책 결론이 한 사람의 시각에 크게 기댈 수 있다. 경력 20년 이상 응답자가 40.7%라는 점도 기존 산업의 관점이 강하게 반영되었을 가능성을 보여준다. 저희는 이 연구의 설문·인터뷰·결론을 <b>‘생산성·권리·수익’</b>이라는 세 축으로 정리해 보았다. 이런 축을 먼저 정하고 문항을 배치하면 결론까지의 연결이 더 선명해질 것이다.</p>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="q">
+  <div class="qh"><span class="no">06</span><h2>상기 방법을 적용한 연구 결과는 무엇인가요?</h2></div>
+  <div class="label">논문에 대한 답변</div>
+  <table class="t">
+    <tr><th style="width:150px">항목</th><th>결과</th><th style="width:52px">쪽</th></tr>
+    <tr><td class="k">AI 도입</td><td>응답자의 70.4%가 활용 중 (적극 14.8% + 일부 55.6%)</td><td class="p">13</td></tr>
+    <tr><td class="k">결과물 품질</td><td>‘기계적’ 40.7% · 보통 33.3% · ‘자연스럽다’ 25.9%</td><td class="p">15</td></tr>
+    <tr><td class="k">창의성·독창성 영향</td><td>부정적 응답 약 80%</td><td class="p">18</td></tr>
+    <tr><td class="k">AI 음악 저작권</td><td>인간 창작물과 동등한 보호에 반대 59.2% · 찬성 29.6%</td><td class="p">41</td></tr>
+    <tr><td class="k">국내 교육 시스템</td><td>인력 양성이 부족하다 70.3%</td><td class="p">65</td></tr>
+    <tr><td class="k">정책 우선순위</td><td>1순위 기술 개발·스타트업 재정 지원, 2순위 저작권·수익 분배 법규</td><td class="p">68</td></tr>
+  </table>
+  <p>연구자는 AI의 효율성을 인정하면서도 결론에서 ① 이용자별 정산 등 <span class="em">새로운 정산 방식</span> ② 학습 데이터 투명성 등 <span class="em">법제화</span> ③ 민관이 함께하는 <span class="em">AI 거버넌스 협의체</span> ④ 중소 제작사 공동 인프라와 전문 인력 양성을 핵심 과제로 제시한다(p.84~87).</p>
+  <div class="think">
+    <div class="label">발표자의 생각</div>
+    <p>원문 그래프를 본문과 직접 대조하다가 두 가지를 확인했다.</p>
+    <div class="fig">
+      <div><b>그림 2.4 생산성 기여 (p.16)</b><br>본문: “약 66.6%가 기여한다”<br>그래프 막대: 5~7점 11명(40.7%), 4점 9명(33.3%), 1~3점 7명(25.9%)<br>→ 본문 수치와 그래프가 일치하지 않는다.</div>
+      <div><b>그림 4.1 AI 영향력 (p.49)</b><br>그래프 캡션: 1 기회 – 7 위협<br>설문지 17번(p.102): 1 위협 – 7 기회<br>→ 본문 “66.6%가 기회로 인식”은 설문지 방향과 맞아, 캡션 표기 오류로 보인다.</div>
+    </div>
+    <p>저희는 이것을 흠잡기보다, 연구자가 끝까지 지키고 싶었던 해석이 드러나는 지점으로 읽었다. 응답자 다수가 AI를 기회로 보았는데도 바로 다음 문단은 기사 인용으로 위협론을 이어가고(p.49), 결론은 보호와 규제로 향한다. 생산성이 높아져도 분배는 불공정할 수 있으므로 이것이 곧 편향이라고 할 수는 없다. 다만 ‘조사에서 확인한 사실’과 ‘정책적으로 바라는 방향’을 구분해 서술했다면 설득력이 더 높았을 것이다. 교수님이 말씀하신 ‘연구자가 해석하고 싶은 욕구’를 볼 수 있는 대목이다.</p>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="q">
+  <div class="qh"><span class="no">07</span><h2>논문분석 후 이 연구과정에서 어떤 어려움이 있었을까요?</h2></div>
+  <div class="label">논문에 대한 답변</div>
+  <p>연구자가 직접 밝힌 한계는 두 가지다(p.10). ① 설문 표본이 작아 전체 산업으로 일반화하는 데 신중해야 한다. ② 법적 분석 시점이 2025년 12월로 고정되어 시의성에 제약이 있다. 후속 연구로는 100명 이상으로 표본을 늘리고, 지역별 균형을 고려하고, 종단 모니터링을 할 것을 제안했다.</p>
+  <div class="think">
+    <div class="label">발표자의 생각</div>
+    <p>저희는 이 연구의 어려움을 ① 빠르게 바뀌는 AI 기술과 법제를 따라가는 일 ② 중소 제작사·인디뮤지션 표본을 확보하는 일 ③ 이해관계가 다른 전문가 의견을 하나의 결론으로 정리하는 일로 추정했다. 저희라면 이렇게 보완하겠다.</p>
+    <ul>
+      <li><b>분석 축 먼저</b>: 축을 정한 뒤 설문·인터뷰 문항을 축별로 배치하고, 결론 제안과 1:1 대응표를 만든다.</li>
+      <li><b>실측 데이터</b>: AI 활용자와 비활용자의 제작 시간·비용·발매량·정산액을 비교한다.</li>
+      <li><b>표본 균형</b>: 협회 비회원, 신인, AI 신규 창작자를 포함한다. 인터뷰는 찬반 입장을 고르게 섭외하고 예비 대상자를 준비한다.</li>
+      <li><b>교차 점검</b>: 설문지 척도 방향, 그래프, 본문 수치를 서로 대조하고, 인터뷰 대상자 표기 방식을 처음부터 끝까지 통일한다.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="kicker"><b>EPILOGUE</b></div>
+  <h3>공동 발표 마무리</h3>
+  <p>저희가 본 것은 AI 음악산업에 대한 찬반이 아니라, 연구자가 문제의식을 어떻게 질문으로 만들고, 접근 가능한 사람과 자료로 조사하고, 어떤 결론으로 연결했는가이다. 현장 경험은 연구를 완성하는 힘이지만, 이미 믿고 있는 결론을 확인하는 쪽으로 기울 수도 있다는 점을 원문을 대조하며 다시 생각하게 되었다.</p>
+  <div class="ask">
+    <div class="label">학우들과 함께 나누고 싶은 질문</div>
+    <p>현장에서 오래 일한 사람은 좋은 연구 질문과 인터뷰 대상자를 쉽게 확보할 수 있지만, 이미 정해 둔 결론을 확인하려는 편향도 생길 수 있습니다. 현장 경험의 강점을 살리면서도 이런 편향을 줄이려면, 연구 설계 단계에서 무엇을 가장 먼저 점검해야 할까요?</p>
+  </div>
+</div>
+
+</body>
+</html>
